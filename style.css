@@ -5,10 +5,11 @@
     font-family: "Poppins", sans-serif;
   }
   body {
-    background-color: #3E0555;
+    background-color: #3e0555;
   }
   .container {
     width: 80vmin;
+    height: 50vmin;
     padding: 50px 30px;
     background-color: #000000;
     position: absolute;
@@ -19,7 +20,7 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   }
   .stats {
-      color: #3E0555;
+      color: #3e0555;
      font-size: 18px;
      margin-top: 20px;
      font-weight: bold;
@@ -29,14 +30,14 @@
      left: 50%;
   }
   #quote {
-      color: #3E0555;
+      color: #3e0555;
       font-weight: bold;
       text-align: justify;
       margin: 50px 0 30px 0;
   }
   textarea {
       color: #ffffff;
-      background-color: #3E0555;
+      background-color: #3e0555;
     resize: none;
     width: 100%;
     border-radius: 5px;
@@ -46,7 +47,7 @@
   }
   .result {
       float: left;
-      color: #3E0555;
+      color: #3e0555;
       font-size: 18px;
       font-weight: bold;
       margin-top: 50px;
@@ -62,40 +63,48 @@
     color: #44b267;
   }
   .fail {
-    color: #e81c4e;
+    text-decoration: line-through;
+    text-decoration-color: #e81c4e;
   }
   button#retake-test{
       margin: auto;
       margin-top: 20px;
-      background-color: #3E0555;
+      background-color: #3e0555;
       color: #ffffff;
       border: none;
       padding: 10px 30px;
       border-radius: 5px;
       font-size: 18px;
       font-weight: bold;
+      visibility: visible;
+      transform: translate(-10%, 50%);
+      top: 50%;
+      left: 50%;
+      visibility: visible;
   }
   button#stop-test {
     margin: auto;
     margin-top: 20px;
-    background-color: #3E0555;
+    background-color: #3e0555;
     color: #ffffff;
     border: none;
     padding: 10px 30px;
     border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
+    visibility: hidden;
   }
   button#start-test {
     margin: auto;
     margin-top: 20px;
-    background-color: #3E0555;
+    background-color: #3e0555;
     color: #ffffff;
     border: none;
     padding: 10px 30px;
     border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
+    visibility: hidden;
   }
   p#title {
     color: #ffffff;
@@ -105,4 +114,9 @@
     top: 5%;
     left: 50%;
     font-size: 50px;
+  }
+  h1#sr {
+    transform: translate(30%, -270%);
+    font-size: 15px;
+    color: white;
   }

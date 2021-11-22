@@ -9,6 +9,8 @@ document.getElementById("start-test").style.display == "none";
 document.getElementById("retake-test").style.display = "none";
 document.getElementById("stop-test").style.display == "none";
 
+quote = (quote.replace("’", "'"))
+
 roundNumber = function() {
     var numSel = document.querySelectorAll('.speed'),
       numCount;

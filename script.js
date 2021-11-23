@@ -30,6 +30,11 @@ const renderNewQuote = async () => {
   let data = await response.json();
 
   quote = data.content;
+  quote.replace(/’/g, "'");
+  quote.replace(/＇/g, "'");
+  quote.replace(/ˊ/g, "'");
+  quote.replace(/`/g, "'");
+  quote.replace(/‘/g, "'");
 
   let arr = quote.split("").map((value) => {
 

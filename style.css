@@ -9,7 +9,7 @@
   }
   .container {
     width: 80vmin;
-    height: 50vmin;
+    height: 55vmin;
     padding: 50px 30px;
     background-color: #000000;
     position: absolute;
@@ -28,7 +28,7 @@
      transform: translate(-50%, -50%);
      top: 10%;
      left: 50%;
-}
+  }
   #quote {
       color: #3e0555;
       font-weight: bold;
@@ -119,4 +119,15 @@
     transform: translate(30%, -270%);
     font-size: 15px;
     color: white;
+  }
+  i.fas.fa-sync-alt {
+    font-size: 30px;
+    color: white;
+  }
+  button#refresh {
+    transform: translate(1335%, 815%);
+    width: 50px;
+    height: 50px;
+    background-color: #3e0555;
+    border-radius: 10px;
   }

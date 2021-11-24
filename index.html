@@ -24,15 +24,15 @@
         </div>
       <div
         id="quote"
-        onmousedown=""
-        onselectstart=""
+        onmousedown="return false"
+        onselectstart="return false"
       ></div>
       <textarea
         rows="3"
         id="quote-input" :focus="inputFocus()"
         placeholder="Start typing to start the test..."
         autofocus
-        maxlength="100"
+        maxlength="250"
       ></textarea>
       <button id="start-test" onclick="startTest()">Start Test</button>
       <button id="stop-test" onclick="displayResult()">Stop Test</button>

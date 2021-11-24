@@ -1,4 +1,4 @@
-const quoteApiUrl = "https://api.quotable.io/random?minLength=100&maxLength=250";
+const quoteApiUrl = "https://api.quotable.io/random?minLength=80&maxLength=100";
 const quoteSection = document.getElementById("quote");
 const userInput = document.getElementById("quote-input");
 let quote = "";
@@ -8,8 +8,6 @@ let mistakes = 0;
 document.getElementById("start-test").style.display == "none";
 document.getElementById("retake-test").style.display = "none";
 document.getElementById("stop-test").style.display == "none";
-
-quote = (quote.replace("’", "'"))
 
 roundNumber = function() {
     var numSel = document.querySelectorAll('.speed'),
@@ -30,11 +28,6 @@ const renderNewQuote = async () => {
   let data = await response.json();
 
   quote = data.content;
-  quote.replace(/’/g, "'");
-  quote.replace(/＇/g, "'");
-  quote.replace(/ˊ/g, "'");
-  quote.replace(/`/g, "'");
-  quote.replace(/‘/g, "'");
 
   let arr = quote.split("").map((value) => {
 
@@ -52,7 +45,7 @@ userInput.addEventListener("input", () => {
 
   quoteChars.forEach((char, index) => {
     if (char.innerText == userInputChars[index]) {
-      document.getElementById("quote-input").maxLength = 250;
+      document.getElementById("quote-input").maxLength = 100;
       char.classList.add("success");
     }
     else if (userInputChars[index] == null) {
@@ -64,7 +57,6 @@ userInput.addEventListener("input", () => {
     }
     else {
       if (!char.classList.contains("fail")) {
-        document.getElementById("quote-input").maxLength = 0;
         mistakes += 1;
         char.classList.add("fail");
       }
@@ -130,19 +122,33 @@ window.onload = () => {
   document.getElementById("start-test").style.display = "block";
   document.getElementById("stop-test").style.display = "none";
   document.getElementById("retake-test").style.display == "none";
-  userInput.disabled = true;
+  userInput.disabled = false;
   renderNewQuote();
+  quote.replace(/’/g, "'");
+  quote.replace(/＇/g, "'");
+  quote.replace(/ˊ/g, "'");
+  quote.replace(/`/g, "'");
+  quote.replace(/‘/g, "'");
 };
+
+//space();
+//function space() {
+//document.body.onkeyup = function(space){
+//  if (document.getElementById("start-test").style.display == "none") return false
+//  if (document.getElementById("start-test").style.display == "block"){
+//    if(space.keyCode == 32){
+//      startTest();
+//    }
+//  }
+//}
+//}
 
 space();
 function space() {
 document.body.onkeyup = function(space){
   if (document.getElementById("start-test").style.display == "none") return false
   if (document.getElementById("start-test").style.display == "block"){
-    if(space.keyCode == 32){
       startTest();
-      userInput.disabled = false;
-    }
   }
 }
 }

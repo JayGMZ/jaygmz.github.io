@@ -45,7 +45,7 @@ userInput.addEventListener("input", () => {
 
   quoteChars.forEach((char, index) => {
     if (char.innerText == userInputChars[index]) {
-      document.getElementById("quote-input").maxLength = 100;
+      document.getElementById("quote-input").maxLength = 250;
       char.classList.add("success");
     }
     else if (userInputChars[index] == null) {

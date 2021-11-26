@@ -115,6 +115,7 @@ const startTest = () => {
 
 const retakeTest = () => {
     document.location.reload(true)
+    document.getElementById("quote-input").focus();
 }
 
 window.onload = () => {

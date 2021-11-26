@@ -129,6 +129,7 @@ window.onload = () => {
   quote.replace(/ˊ/g, "'");
   quote.replace(/`/g, "'");
   quote.replace(/‘/g, "'");
+  document.getElementById("quote-input").focus();
 };
 
 //space();

@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
   }
+  html, body {margin: 0; height: 100%; overflow: hidden}
   body {
     background-color: #3e0555;
   }
@@ -130,4 +131,9 @@
     height: 50px;
     background-color: #3e0555;
     border-radius: 10px;
+  }
+  h1#Copyright {
+    color: #ffffff;
+    transform: translate(41%, 3350%);
+    font-size: 15px;
   }
